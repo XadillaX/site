@@ -7,7 +7,9 @@
   },
   "scripts": {
     "build": "hexo generate && gulp",
-    "deploy": "hexo deploy"
+    "deploy": "hexo deploy",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
     "cheerio": "^0.20.0",
@@ -21,7 +23,8 @@
     "hexo-renderer-stylus": "^0.3.1",
     "hexo-server": "^0.2.0",
     "lodash": "^4.5.1",
-    "lunr": "^0.6.0"
+    "lunr": "^0.6.0",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "cssnano": "^3.5.2",
@@ -36,5 +39,6 @@
     "gulp-uglify": "^1.5.3",
     "gulp-unique-files": "^0.1.2",
     "gulp-useref": "^2.1.0"
-  }
+  },
+  "snyk": true
 }
